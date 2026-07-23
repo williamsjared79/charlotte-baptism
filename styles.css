@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --navy: #173f68;
+  --gold: #c4a15a;
+  --ink: #2b2b2b;
+  --cream: #fbf8f2;
+  --line: #ded4c4;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: linear-gradient(180deg, #f7f3ec 0%, #fff 100%);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+.site-shell {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 10px 35px rgba(39, 44, 48, .10);
+}
+
+.hero {
+  position: relative;
+  min-height: 690px;
+  overflow: hidden;
+  display: grid;
+  place-items: end center;
+  color: white;
+  text-align: center;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 20, 32, .03) 0%,
+    rgba(8, 20, 32, .08) 48%,
+    rgba(8, 20, 32, .74) 100%
+  );
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 12rem 1.5rem 3.25rem;
+  text-shadow: 0 2px 14px rgba(0,0,0,.4);
+}
+
+.eyebrow {
+  margin: 0 0 .4rem;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  line-height: .95;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 1rem 0 .25rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.date {
+  margin: .55rem 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.section {
+  padding: 3.5rem clamp(1.25rem, 4vw, 4rem);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.section-heading span {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.section-heading span:last-child {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+}
+
+.leaders {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.leaders p { margin: 0; }
+.leaders strong { color: var(--navy); }
+
+.service-list { display: grid; gap: .1rem; }
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(190px, 34%) 1fr;
+  gap: 1.4rem;
+  padding: .75rem 0;
+  border-bottom: 1px solid rgba(222,212,196,.68);
+}
+
+.item h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.25rem;
+}
+
+.item p { margin: 0; }
+
+.item.emphasis { grid-template-columns: 1fr; }
+
+.item.emphasis h3 {
+  color: #123a63;
+  font-size: 1.45rem;
+}
+
+.hymns {
+  background:
+    linear-gradient(rgba(251,248,242,.97), rgba(251,248,242,.97)),
+    radial-gradient(circle at 10% 10%, rgba(141,165,140,.25), transparent 25rem);
+}
+
+.hymn {
+  padding: 1.5rem 0 2.2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.hymn:last-child { border-bottom: 0; }
+
+.hymn h3 {
+  margin: 0 0 .35rem;
+  color: var(--navy);
+  text-align: center;
+  font-size: 2.1rem;
+}
+
+.hymn h4 {
+  margin: 1.3rem 0 .35rem;
+  color: var(--navy);
+  font-size: 1.25rem;
+}
+
+.hymn p {
+  margin: 0 0 1.3rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.28rem;
+}
+
+.hymn .tempo {
+  text-align: center;
+  font-size: 1.08rem;
+}
+
+@media (max-width: 700px) {
+  .site-shell { width: 100%; box-shadow: none; }
+
+  .hero {
+    min-height: 610px;
+  }
+
+  .hero img {
+    object-position: 46% center;
+  }
+
+  .hero-copy {
+    padding-top: 14rem;
+    padding-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 15vw, 4.7rem);
+  }
+
+  .leaders {
+    grid-template-columns: 1fr;
+    gap: .95rem;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    gap: .2rem;
+    padding: .85rem 0;
+  }
+
+  .item h3 {
+    font-size: 1.35rem;
+  }
+
+  .hymn p {
+    font-size: 1.2rem;
+  }
+}
